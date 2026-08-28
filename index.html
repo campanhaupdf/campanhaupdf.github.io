@@ -1,175 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#d71920">
-<title>Unidade Popular — Vamos às ruas!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5c400">
+<title>UP DF — Vamos às ruas!</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="up-logo" href="https://unidadepopular.org.br/" target="_blank" rel="noopener" aria-label="Unidade Popular">UP</a>
-    <div class="brand">
-      <strong>UNIDADE POPULAR</strong>
-      <span>PELO SOCIALISMO</span>
-    </div>
-    <div class="number">80</div>
+<header class="top">
+  <div class="wrap nav">
+    <a class="logo" href="https://unidadepopular.org.br/" target="_blank" rel="noopener">UP</a>
+    <div class="brand"><b>UNIDADE POPULAR</b><span>PELO SOCIALISMO</span></div>
+    <span class="number">80</span>
   </div>
 </header>
 
-<section class="campaign-hero">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <span class="eyebrow">ELEIÇÕES 2026 · DISTRITO FEDERAL</span>
-      <h1>VAMOS ÀS<br><em>RUAS!</em></h1>
-      <p>Cadastre sua disponibilidade para ajudar a construir a campanha da Unidade Popular no Distrito Federal.</p>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">ELEIÇÕES 2026 · DISTRITO FEDERAL</p>
+      <h1>VAMOS<br><span>ÀS RUAS!</span></h1>
+      <p class="lead">Ajude a construir a campanha da Unidade Popular. Cadastre quando e onde você pode fazer panfletagem.</p>
+      <a class="hero-btn" href="#cadastro">QUERO AJUDAR ↓</a>
     </div>
-    <div class="hero-mark">80</div>
+    <div class="hero-80">80</div>
   </div>
 </section>
 
-<section class="candidates">
-  <div class="section-inner">
-    <div class="section-title">
-      <span>CONHEÇA</span>
-      <h2>NOSSAS CANDIDATURAS</h2>
-      <p>Quem representa as lutas do povo no Distrito Federal.</p>
+<section class="signup" id="cadastro">
+<div class="wrap">
+  <div class="title">
+    <p>FAÇA PARTE</p>
+    <h2>CADASTRE SUA DISPONIBILIDADE</h2>
+    <span>Você pode ter horários diferentes em cada dia. Marque os turnos separadamente.</span>
+  </div>
+  <div class="form-card">
+  <form id="cadastroForm">
+    <div class="two">
+      <label>Nome completo<input name="nome" required maxlength="120" placeholder="Seu nome"></label>
+      <label>WhatsApp<input name="whatsapp" required maxlength="30" inputmode="tel" placeholder="(61) 99999-9999"></label>
+    </div>
+    <div class="two">
+      <label>Região / cidade<input name="regiao" required maxlength="100" placeholder="Ex.: Ceilândia"></label>
+      <label>Local onde pode panfletar<input name="local" required maxlength="160" placeholder="Ex.: estação, terminal, escola..."></label>
     </div>
 
-    <div class="candidate-grid">
-      <article class="candidate featured">
-        <div class="candidate-photo"><img src="https://i0.statig.com.br/bancodeimagens/9g/hv/a8/9ghva8mzswp5hys13w283a312.jpg" alt="Professora Samara Mineiro"></div>
-        <div class="candidate-body">
-          <span class="office">GOVERNADORA · 80</span>
-          <h3>Professora Samara Mineiro</h3>
-          <p>Distrito Federal</p>
-          <a href="https://unidadepopular.org.br/eleicoes/professora-samara-mineiro" target="_blank" rel="noopener">CONHECER CANDIDATURA →</a>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <div class="candidate-photo initials">GA</div>
-        <div class="candidate-body">
-          <span class="office">SENADOR · 80</span>
-          <h3>Professor Guilherme Amorim</h3>
-          <p>Distrito Federal</p>
-          <a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER CANDIDATURA →</a>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <div class="candidate-photo initials">DU</div>
-        <div class="candidate-body">
-          <span class="office">DEPUTADO FEDERAL · 80</span>
-          <h3>Durval</h3>
-          <p>Distrito Federal</p>
-          <a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER CANDIDATURA →</a>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <div class="candidate-photo initials">ML</div>
-        <div class="candidate-body">
-          <span class="office">DEPUTADA FEDERAL · 80</span>
-          <h3>Milena do MLB</h3>
-          <p>Distrito Federal</p>
-          <a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER CANDIDATURA →</a>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <div class="candidate-photo initials">BC</div>
-        <div class="candidate-body">
-          <span class="office">DEPUTADA DISTRITAL · 80.110</span>
-          <h3>Bárbara Calista</h3>
-          <p>Distrito Federal</p>
-          <a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER CANDIDATURA →</a>
-        </div>
-      </article>
-
-      <article class="candidate">
-        <div class="candidate-photo initials">CS</div>
-        <div class="candidate-body">
-          <span class="office">DEPUTADO DISTRITAL · 80.123</span>
-          <h3>Christian Rodrigues Sena</h3>
-          <p>Distrito Federal</p>
-          <a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER CANDIDATURA →</a>
-        </div>
-      </article>
+    <div class="availability">
+      <h3>QUANDO VOCÊ PODE PANFLETAR?</h3>
+      <p class="hint">Em cada dia, marque todos os turnos em que você está disponível.</p>
+      <div class="days">
+        <div class="day"><strong>SEGUNDA</strong><div class="checks">
+          <label><input type="checkbox" name="segunda_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="segunda_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="segunda_noite"><span>☾ NOITE</span></label></div><input name="segunda_horario" placeholder="Horário específico (opcional)"></div>
+        <div class="day"><strong>TERÇA</strong><div class="checks">
+          <label><input type="checkbox" name="terca_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="terca_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="terca_noite"><span>☾ NOITE</span></label></div><input name="terca_horario" placeholder="Horário específico (opcional)"></div>
+        <div class="day"><strong>QUARTA</strong><div class="checks">
+          <label><input type="checkbox" name="quarta_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="quarta_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="quarta_noite"><span>☾ NOITE</span></label></div><input name="quarta_horario" placeholder="Horário específico (opcional)"></div>
+        <div class="day"><strong>QUINTA</strong><div class="checks">
+          <label><input type="checkbox" name="quinta_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="quinta_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="quinta_noite"><span>☾ NOITE</span></label></div><input name="quinta_horario" placeholder="Horário específico (opcional)"></div>
+        <div class="day"><strong>SEXTA</strong><div class="checks">
+          <label><input type="checkbox" name="sexta_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="sexta_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="sexta_noite"><span>☾ NOITE</span></label></div><input name="sexta_horario" placeholder="Horário específico (opcional)"></div>
+        <div class="day"><strong>SÁBADO</strong><div class="checks">
+          <label><input type="checkbox" name="sabado_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="sabado_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="sabado_noite"><span>☾ NOITE</span></label></div><input name="sabado_horario" placeholder="Horário específico (opcional)"></div>
+        <div class="day"><strong>DOMINGO</strong><div class="checks">
+          <label><input type="checkbox" name="domingo_manha"><span>☀ MANHÃ</span></label><label><input type="checkbox" name="domingo_tarde"><span>☼ TARDE</span></label><label><input type="checkbox" name="domingo_noite"><span>☾ NOITE</span></label></div><input name="domingo_horario" placeholder="Horário específico (opcional)"></div>
+      </div>
     </div>
+
+    <label>Observações<textarea name="observacoes" rows="3" maxlength="500" placeholder="Alguma preferência ou informação?"></textarea></label>
+    <button type="submit">QUERO AJUDAR NA CAMPANHA ✊</button>
+    <p id="status" class="status"></p>
+  </form>
   </div>
-    <p class="candidate-source">Fotos e informações: página oficial de candidaturas da Unidade Popular. <a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">Ver candidaturas oficiais →</a></p>
-  </div>
+</div>
 </section>
 
-<section class="signup">
-  <div class="section-inner">
-    <div class="section-title light">
-      <span>FAÇA PARTE</span>
-      <h2>AJUDE A LEVAR A UP ÀS RUAS</h2>
-      <p>Preencha seus dados. A organização poderá encontrar quem está disponível em cada região, dia e horário.</p>
-    </div>
-
-    <div class="form-card">
-      <form id="cadastroForm">
-        <label>Nome completo
-          <input name="nome" required maxlength="120" autocomplete="name" placeholder="Digite seu nome">
-        </label>
-
-        <label>WhatsApp
-          <input name="whatsapp" required maxlength="30" inputmode="tel" placeholder="(61) 99999-9999">
-        </label>
-
-        <label>Região / cidade
-          <input name="regiao" required maxlength="100" placeholder="Ex.: Ceilândia">
-        </label>
-
-        <label>Local onde você pode panfletar
-          <input name="local" required maxlength="160" placeholder="Ex.: Rodoviária, estação, centro...">
-        </label>
-
-        <div class="field">
-          <strong>Em quais dias você pode?</strong>
-          <div class="chips days">
-            <label><input type="checkbox" name="dias" value="Segunda"><span>SEG</span></label>
-            <label><input type="checkbox" name="dias" value="Terça"><span>TER</span></label>
-            <label><input type="checkbox" name="dias" value="Quarta"><span>QUA</span></label>
-            <label><input type="checkbox" name="dias" value="Quinta"><span>QUI</span></label>
-            <label><input type="checkbox" name="dias" value="Sexta"><span>SEX</span></label>
-            <label><input type="checkbox" name="dias" value="Sábado"><span>SÁB</span></label>
-            <label><input type="checkbox" name="dias" value="Domingo"><span>DOM</span></label>
-          </div>
-        </div>
-
-        <div class="field">
-          <strong>Em quais horários?</strong>
-          <div class="chips">
-            <label><input type="checkbox" name="horarios" value="Manhã"><span>MANHÃ</span></label>
-            <label><input type="checkbox" name="horarios" value="Tarde"><span>TARDE</span></label>
-            <label><input type="checkbox" name="horarios" value="Noite"><span>NOITE</span></label>
-          </div>
-          <input name="horario_especifico" maxlength="80" placeholder="Se quiser, especifique: 17h às 19h">
-        </div>
-
-        <label>Observações
-          <textarea name="observacoes" rows="3" maxlength="500" placeholder="Alguma preferência ou informação?"></textarea>
-        </label>
-
-        <button type="submit">QUERO AJUDAR NA CAMPANHA ✊</button>
-        <p id="status" class="status"></p>
-      </form>
-    </div>
+<section class="candidaturas">
+<div class="wrap">
+  <div class="title"><p>CONHEÇA</p><h2>NOSSAS CANDIDATURAS</h2><span>Conheça as candidaturas da Unidade Popular no Distrito Federal.</span></div>
+  <div class="cards">
+    <article><div class="photo">SM</div><b>GOVERNADORA · 80</b><h3>Professora Samara Mineiro</h3><a href="https://unidadepopular.org.br/eleicoes/professora-samara-mineiro" target="_blank" rel="noopener">CONHECER →</a></article>
+    <article><div class="photo">GA</div><b>SENADOR · 80.0</b><h3>Professor Guilherme Amorim</h3><a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER →</a></article>
+    <article><div class="photo">D</div><b>DEPUTADO FEDERAL · 80.80</b><h3>Durval</h3><a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER →</a></article>
+    <article><div class="photo">M</div><b>DEPUTADA FEDERAL · 80.00</b><h3>Milena do MLB</h3><a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER →</a></article>
+    <article><div class="photo">BC</div><b>DEPUTADA ESTADUAL · 80.110</b><h3>Bárbara Calista</h3><a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER →</a></article>
+    <article><div class="photo">CS</div><b>DEPUTADO ESTADUAL · 80.123</b><h3>Christian Rodrigues Sena</h3><a href="https://unidadepopular.org.br/eleicoes" target="_blank" rel="noopener">CONHECER →</a></article>
   </div>
+</div>
 </section>
 
-<footer>
-  <div class="footer-logo">UP <span>80</span></div>
-  <p>UNIDADE POPULAR PELO SOCIALISMO</p>
-  <small>O partido antifascista do Brasil</small>
-</footer>
-
+<footer><strong>UP <small>80</small></strong><p>UNIDADE POPULAR PELO SOCIALISMO</p></footer>
 <script src="config.js"></script>
 <script src="app.js"></script>
 </body>
