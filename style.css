@@ -1,43 +1,378 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@500;700;800;900&display=swap');
-:root{--yellow:#f5c400;--black:#111;--white:#fff;--paper:#f4f1e8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--black);font-family:Inter,Arial,sans-serif}.wrap{width:min(1160px,92%);margin:auto}.top{background:var(--yellow);border-bottom:4px solid #111}.nav{height:78px;display:flex;align-items:center;gap:14px}.logo{font:60px/.8 Anton,Impact,sans-serif;color:#111;text-decoration:none;letter-spacing:-4px}.brand{border-left:3px solid #111;padding-left:13px;display:flex;flex-direction:column;font-size:14px;line-height:1}.brand span{font-size:11px;margin-top:5px}.number{margin-left:auto;background:#111;color:#fff;border-radius:50%;font:34px Anton;padding:8px 12px;transform:rotate(-7deg)}.hero{background:var(--yellow);padding:78px 0 90px}.hero-grid{display:flex;justify-content:space-between;align-items:center}.kicker,.title>p,article>b{font:900 15px "Barlow Condensed";letter-spacing:2px}.hero h1{font:clamp(75px,12vw,145px)/.82 Anton;margin:20px 0;letter-spacing:-3px}.hero h1 span{color:#fff;-webkit-text-stroke:3px #111;text-shadow:7px 7px 0 #111}.lead{font-size:19px;line-height:1.5;max-width:650px}.hero-btn{display:inline-block;background:#111;color:#fff;padding:15px 22px;text-decoration:none;font-weight:900;margin-top:18px;box-shadow:6px 6px 0 #fff}.hero-80{font:220px/.7 Anton;color:#fff;-webkit-text-stroke:4px #111;transform:rotate(-8deg)}.signup{background:#111;color:#fff;padding:75px 0 95px}.signup .title>p{color:var(--yellow)}.signup .title h2{color:#fff}.signup .title span{color:#ccc}.form-card{background:#fff;color:#111;border:3px solid #fff;padding:30px;box-shadow:8px 8px 0 var(--yellow)}.title h2{font:clamp(44px,7vw,76px)/.9 Anton;margin:10px 0 30px}.title span{display:block;color:#666}label{display:block;font-weight:800;margin-bottom:18px}input,textarea{width:100%;display:block;margin-top:7px;padding:13px;border:2px solid #111;border-radius:0;font:inherit}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.availability{border-top:3px solid #111;border-bottom:3px solid #111;padding:25px 0;margin:12px 0 25px}.availability h3{font:30px Anton;margin:0}.hint{margin:6px 0 20px;color:#555}.days{display:grid;grid-template-columns:1fr;gap:12px}.day{border:2px solid #111;padding:14px}.day>strong{font:900 20px "Barlow Condensed";display:block;margin-bottom:10px}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.checks label{margin:0}.checks input{position:absolute;opacity:0;width:0;height:0}.checks span{display:block;border:2px solid #111;padding:10px 5px;text-align:center;font:900 14px "Barlow Condensed";cursor:pointer}.checks input:checked+span{background:var(--yellow);border-color:#111}.day>input{margin-top:8px}button{width:100%;background:var(--yellow);border:3px solid #111;padding:17px;font:27px Anton;cursor:pointer;box-shadow:5px 5px 0 #111}button:active{transform:translate(3px,3px);box-shadow:2px 2px #111}.status{text-align:center;min-height:22px;font-weight:900}.success{color:#137a3b}.error{color:#d71920}.candidaturas{background:#fff;padding:75px 0}.candidaturas .title>p{color:#111}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cards article{border:3px solid #111;background:var(--paper);box-shadow:7px 7px 0 var(--yellow);padding-bottom:20px}.photo{height:180px;background:#111;color:#fff;display:grid;place-items:center;font:80px Anton}.cards article>b{display:block;color:#111;padding:18px 18px 0;font-size:13px}.cards h3{font:900 31px/.9 "Barlow Condensed";margin:8px 18px 20px;text-transform:uppercase}.cards a{margin:0 18px;color:#111;text-decoration:none;font-size:12px;font-weight:900;border-bottom:3px solid var(--yellow)}footer{background:var(--yellow);text-align:center;padding:38px 20px;border-top:4px solid #111}footer strong{font:70px Anton}footer small{font-size:30px}footer p{font-weight:900}@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.hero-80{font-size:130px}}@media(max-width:600px){.hero-grid{display:block}.hero-80{text-align:right}.cards{grid-template-columns:1fr}.two{grid-template-columns:1fr}.checks{grid-template-columns:1fr}.form-card{padding:20px}.hero{padding:55px 0 65px}}
-.logo img {
-  width: 210px;
-  height: auto;
-  display: block;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.hero-text {
-  flex: 1;
-}
+    <title>Unidade Popular — Militância</title>
 
-.hero-image {
-  width: 43%;
-  max-width: 500px;
-  margin-left: 50px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 3px solid #111;
-  box-shadow: 10px 10px #fff;
-}
-@media (max-width: 700px) {
+<body>
 
-  .logo img {
-    width: 160px;
-  }
+    <!-- TOPO -->
+    <header class="topo">
+        <div class="container topo-conteudo">
 
-  .hero-grid {
-    display: flex;
-    flex-direction: column;
-  }
+            <div class="logo">
+                <span>UNIDADE</span>
+                <strong>POPULAR</strong>
+            </div>
 
-  .hero-image {
-    width: 100%;
-    max-width: 500px;
-    margin: 45px 0 0 0;
-  }
+            <div class="sigla">
+                UP
+            </div>
 
-}
+        </div>
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+    <section class="hero">
+
+        <div class="container hero-conteudo">
+
+            <div class="hero-texto">
+
+                <p class="etiqueta">
+                    UNIDADE POPULAR · DISTRITO FEDERAL
+                </p>
+
+                <h1>
+                    VAMOS<br>
+                    <span>ÀS RUAS.</span>
+                </h1>
+
+                <p class="descricao">
+                    Cadastre sua disponibilidade para ajudar
+                    nas atividades de panfletagem e mobilização
+                    da Unidade Popular.
+                </p>
+
+                <a href="#cadastro" class="botao">
+                    CADASTRAR DISPONIBILIDADE
+                </a>
+
+            </div>
+
+            <div class="hero-imagem">
+                <div class="imagem-placeholder">
+                    <span>IMAGEM<br>DA CAMPANHA</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FORMULÁRIO -->
+    <section id="cadastro" class="cadastro">
+
+        <div class="container">
+
+            <div class="titulo-secao">
+
+                <p class="etiqueta">CADASTRO</p>
+
+                <h2>
+                    SUA<br>
+                    DISPONIBILIDADE
+                </h2>
+
+                <p>
+                    Informe seus dados e escolha os dias e
+                    turnos em que você pode participar.
+                </p>
+
+            </div>
+
+
+            <div class="formulario-box">
+
+                <form id="cadastroForm">
+
+                    <div class="campos-duplos">
+
+                        <div class="campo">
+                            <label>Nome completo</label>
+                            <input
+                                type="text"
+                                name="nome"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label>WhatsApp</label>
+                            <input
+                                type="tel"
+                                name="whatsapp"
+                                placeholder="(61) 99999-9999"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label>Região / cidade</label>
+                            <input
+                                type="text"
+                                name="regiao"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label>Local onde pode panfletar</label>
+                            <input
+                                type="text"
+                                name="local"
+                                placeholder="Ex.: Rodoviária, campus, bairro..."
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- DISPONIBILIDADE -->
+                    <div class="disponibilidade">
+
+                        <div class="subtitulo">
+                            <h3>DIAS E TURNOS</h3>
+
+                            <p>
+                                Escolha os turnos disponíveis
+                                em cada dia.
+                            </p>
+                        </div>
+
+
+                        <div class="dias">
+
+                            <div class="dia">
+                                <h4>SEGUNDA</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="segunda_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="segunda_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="segunda_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input
+                                    class="horario"
+                                    name="segunda_horario"
+                                    placeholder="Horário específico (opcional)"
+                                >
+                            </div>
+
+
+                            <div class="dia">
+                                <h4>TERÇA</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="terca_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="terca_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="terca_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input class="horario" name="terca_horario" placeholder="Horário específico (opcional)">
+                            </div>
+
+
+                            <div class="dia">
+                                <h4>QUARTA</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="quarta_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="quarta_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="quarta_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input class="horario" name="quarta_horario" placeholder="Horário específico (opcional)">
+                            </div>
+
+
+                            <div class="dia">
+                                <h4>QUINTA</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="quinta_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="quinta_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="quinta_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input class="horario" name="quinta_horario" placeholder="Horário específico (opcional)">
+                            </div>
+
+
+                            <div class="dia">
+                                <h4>SEXTA</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="sexta_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="sexta_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="sexta_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input class="horario" name="sexta_horario" placeholder="Horário específico (opcional)">
+                            </div>
+
+
+                            <div class="dia">
+                                <h4>SÁBADO</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="sabado_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="sabado_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="sabado_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input class="horario" name="sabado_horario" placeholder="Horário específico (opcional)">
+                            </div>
+
+
+                            <div class="dia">
+                                <h4>DOMINGO</h4>
+
+                                <div class="turnos">
+                                    <label>
+                                        <input type="checkbox" name="domingo_manha">
+                                        <span>MANHÃ</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="domingo_tarde">
+                                        <span>TARDE</span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="domingo_noite">
+                                        <span>NOITE</span>
+                                    </label>
+                                </div>
+
+                                <input class="horario" name="domingo_horario" placeholder="Horário específico (opcional)">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OBSERVAÇÕES -->
+                    <div class="campo">
+
+                        <label>Observações</label>
+
+                        <textarea
+                            name="observacoes"
+                            rows="4"
+                            placeholder="Alguma informação importante?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="botao-enviar">
+                        ENVIAR CADASTRO
+                    </button>
+
+                    <p id="status"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="container footer-conteudo">
+
+            <strong>UP</strong>
+
+            <span>
+                UNIDADE POPULAR PELO SOCIALISMO
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
