@@ -89,7 +89,9 @@ body {
     color: var(--branco);
     letter-spacing: -2px;
 }
-
+.logo img {
+    width: 95px;
+}
 .tag {
     font-family: "Barlow Condensed", sans-serif;
     font-size: 13px;
@@ -119,7 +121,7 @@ body {
     margin: 0;
     font-family: "Anton", sans-serif;
     font-size: clamp(65px, 9vw, 115px);
-    line-height: 0.95;
+    line-height: 0.99;
 }
 
 .hero h1 span {
@@ -180,7 +182,7 @@ body {
     margin: 0 0 18px;
     font-family: "Anton", sans-serif;
     font-size: clamp(55px, 8vw, 92px);
-    line-height: 0.95;
+    line-height: 0.97;
 }
 
 .titulo-secao p {
