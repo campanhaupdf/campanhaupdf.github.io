@@ -184,29 +184,24 @@ formulario.addEventListener(
            PEGAR DADOS
         ================================================== */
 
-        const dados = {
+       const dados = {
 
-            nome:
-                formulario.nome.value.trim(),
+    nome: formulario.nome.value.trim(),
 
-            whatsapp:
-                formulario.whatsapp.value.trim(),
+    whatsapp: formulario.whatsapp.value.trim(),
 
-            regiao:
-                formulario.regiao.value.trim(),
+    regiao: formulario.regiao.value.trim(),
 
-            local: Array.from(
-    formulario.querySelectorAll(
-        'input[name="local"]:checked'
-    )
-).map(input => input.value),
+    local: Array.from(
+        formulario.querySelectorAll(
+            'input[name="local"]:checked'
+        )
+    ).map(input => input.value),
 
-            disponibilidade:
-                disponibilidade,
+    dias: disponibilidade,
 
-            observacoes:
-                formulario.observacoes.value.trim()
-
+    observacoes: formulario.observacoes.value.trim()
+    
         };
 
 
