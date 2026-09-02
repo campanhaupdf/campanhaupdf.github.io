@@ -119,7 +119,7 @@ body {
     margin: 0;
     font-family: "Anton", sans-serif;
     font-size: clamp(65px, 9vw, 115px);
-    line-height: 0.83;
+    line-height: 0.95;
 }
 
 .hero h1 span {
@@ -180,7 +180,7 @@ body {
     margin: 0 0 18px;
     font-family: "Anton", sans-serif;
     font-size: clamp(55px, 8vw, 92px);
-    line-height: 0.84;
+    line-height: 0.95;
 }
 
 .titulo-secao p {
