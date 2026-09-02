@@ -9,6 +9,6 @@
    - chave pública (anon)
 ========================================================= */
 
-const SUPABASE_URL = "sb_publishable_zbRm4ZfH4EPsz2OZxQzM0g_LX4D9uqw";
+const SUPABASE_URL = "shttps://ksbhrjdgtvktgjgsrahp.supabase.co";
 
-const SUPABASE_ANON_KEY = "CeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtzYmhyamRndHZrdGdqZ3NyYWhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NzI2NzAsImV4cCI6MjEwMzM0ODY3MH0.XR8TrPVlr_oZFO8wkBSLm8SV5DW3LDImKGurTKZr01U";
+const SUPABASE_ANON_KEY = "sb_publishable_zbRm4ZfH4EPsz2OZxQzM0g_LX4D9uqw";
