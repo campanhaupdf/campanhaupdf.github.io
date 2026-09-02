@@ -1,9 +1,188 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unidade Popular — Disponibilidade</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a class="logo" href="https://unidadepopular.org.br/" target="_blank"><span>UNIDADE<br><b>POPULAR</b></span><strong>UP</strong></a><span class="tag">DF · 2026</span></div></header>
-<section class="hero"><div class="container"><p class="eyebrow">UNIDADE POPULAR · DISTRITO FEDERAL</p><h1>VAMOS<br><span>ÀS RUAS.</span></h1><p class="intro">Cadastre sua disponibilidade para ajudar nas atividades de panfletagem e mobilização da Unidade Popular.</p><a class="button" href="#cadastro">CADASTRAR DISPONIBILIDADE ↓</a></div></section>
-<section id="cadastro" class="cadastro"><div class="container"><div class="section-title"><p class="eyebrow">CADASTRO DE MILITANTES</p><h2>SUA<br>DISPONIBILIDADE</h2><p>Escolha os dias e turnos em que você pode participar. Cada dia pode ter uma disponibilidade diferente.</p></div>
-<div class="form-box"><form id="cadastroForm"><div class="two"><label>Nome completo<input name="nome" required></label><label>WhatsApp<input name="whatsapp" required placeholder="(61) 99999-9999"></label><label>Região / cidade<input name="regiao" required></label><label>Local onde pode panfletar<input name="local" required placeholder="Ex.: Rodoviária, campus, bairro..."></label></div>
-<div class="availability"><h3>DIAS E TURNOS</h3><p>Marque todos os turnos em que você tem disponibilidade.</p><div id="days"></div></div>
-<label>Observações<textarea name="observacoes" rows="4" placeholder="Alguma informação importante?"></textarea></label><button class="submit" type="submit">ENVIAR CADASTRO</button><p id="status"></p></form></div></div></section>
-<script src="config.js"></script>
-<script src="app.js"></script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidade Popular — Disponibilidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOPO
+    ====================================================== -->
+    <header class="topo">
+        <div class="container topo-conteudo">
+
+            <a
+                href="https://unidadepopular.org.br/"
+                target="_blank"
+                class="logo"
+            >
+                <span class="logo-texto">
+                    UNIDADE<br>
+                    <b>POPULAR</b>
+                </span>
+
+                <strong class="logo-up">UP</strong>
+            </a>
+
+            <span class="tag">DF · 2026</span>
+
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         APRESENTAÇÃO
+    ====================================================== -->
+    <section class="hero">
+        <div class="container">
+
+            <p class="eyebrow">
+                UNIDADE POPULAR · DISTRITO FEDERAL
+            </p>
+
+            <h1>
+                VAMOS<br>
+                <span>ÀS RUAS.</span>
+            </h1>
+
+            <p class="intro">
+                Cadastre sua disponibilidade para ajudar nas
+                atividades de panfletagem e mobilização da
+                Unidade Popular.
+            </p>
+
+            <a href="#cadastro" class="botao">
+                CADASTRAR DISPONIBILIDADE ↓
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         FORMULÁRIO
+    ====================================================== -->
+    <section id="cadastro" class="cadastro">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <p class="eyebrow">
+                    CADASTRO DE MILITANTES
+                </p>
+
+                <h2>
+                    SUA<br>
+                    DISPONIBILIDADE
+                </h2>
+
+                <p>
+                    Escolha os dias e turnos em que você pode
+                    participar. Cada dia pode ter uma
+                    disponibilidade diferente.
+                </p>
+            </div>
+
+
+            <div class="formulario-box">
+                <form id="cadastroForm">
+
+                    <!-- DADOS PESSOAIS -->
+                    <div class="campos-duplos">
+
+                        <label class="campo">
+                            Nome completo
+                            <input
+                                type="text"
+                                name="nome"
+                                required
+                            >
+                        </label>
+
+                        <label class="campo">
+                            WhatsApp
+                            <input
+                                type="tel"
+                                name="whatsapp"
+                                placeholder="(61) 99999-9999"
+                                required
+                            >
+                        </label>
+
+                        <label class="campo">
+                            Região / cidade
+                            <input
+                                type="text"
+                                name="regiao"
+                                required
+                            >
+                        </label>
+
+                        <label class="campo">
+                            Local onde pode panfletar
+                            <input
+                                type="text"
+                                name="local"
+                                placeholder="Ex.: Rodoviária, campus, bairro..."
+                                required
+                            >
+                        </label>
+
+                    </div>
+
+
+                    <!-- DISPONIBILIDADE -->
+                    <div class="disponibilidade">
+
+                        <div class="subtitulo">
+                            <h3>DIAS E TURNOS</h3>
+
+                            <p>
+                                Marque todos os turnos em que você
+                                tem disponibilidade.
+                            </p>
+                        </div>
+
+                        <div id="dias"></div>
+
+                    </div>
+
+
+                    <!-- OBSERVAÇÕES -->
+                    <label class="campo">
+                        Observações
+
+                        <textarea
+                            name="observacoes"
+                            rows="4"
+                            placeholder="Alguma informação importante?"
+                        ></textarea>
+                    </label>
+
+
+                    <!-- ÚLTIMO ELEMENTO VISUAL DA PÁGINA -->
+                    <button
+                        type="submit"
+                        class="botao-enviar"
+                    >
+                        ENVIAR CADASTRO
+                    </button>
+
+                    <p id="status"></p>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

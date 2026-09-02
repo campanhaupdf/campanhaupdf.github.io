@@ -1,378 +1,419 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Unidade Popular — Militância</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- TOPO -->
-    <header class="topo">
-        <div class="container topo-conteudo">
-
-            <div class="logo">
-                <span>UNIDADE</span>
-                <strong>POPULAR</strong>
-            </div>
-
-            <div class="sigla">
-                UP
-            </div>
-
-        </div>
-    </header>
-
-
-    <!-- APRESENTAÇÃO -->
-    <section class="hero">
-
-        <div class="container hero-conteudo">
-
-            <div class="hero-texto">
-
-                <p class="etiqueta">
-                    UNIDADE POPULAR · DISTRITO FEDERAL
-                </p>
-
-                <h1>
-                    VAMOS<br>
-                    <span>ÀS RUAS.</span>
-                </h1>
-
-                <p class="descricao">
-                    Cadastre sua disponibilidade para ajudar
-                    nas atividades de panfletagem e mobilização
-                    da Unidade Popular.
-                </p>
-
-                <a href="#cadastro" class="botao">
-                    CADASTRAR DISPONIBILIDADE
-                </a>
-
-            </div>
-
-            <div class="hero-imagem">
-                <div class="imagem-placeholder">
-                    <span>IMAGEM<br>DA CAMPANHA</span>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FORMULÁRIO -->
-    <section id="cadastro" class="cadastro">
-
-        <div class="container">
-
-            <div class="titulo-secao">
-
-                <p class="etiqueta">CADASTRO</p>
-
-                <h2>
-                    SUA<br>
-                    DISPONIBILIDADE
-                </h2>
-
-                <p>
-                    Informe seus dados e escolha os dias e
-                    turnos em que você pode participar.
-                </p>
-
-            </div>
-
-
-            <div class="formulario-box">
-
-                <form id="cadastroForm">
-
-                    <div class="campos-duplos">
-
-                        <div class="campo">
-                            <label>Nome completo</label>
-                            <input
-                                type="text"
-                                name="nome"
-                                required
-                            >
-                        </div>
-
-                        <div class="campo">
-                            <label>WhatsApp</label>
-                            <input
-                                type="tel"
-                                name="whatsapp"
-                                placeholder="(61) 99999-9999"
-                                required
-                            >
-                        </div>
-
-                        <div class="campo">
-                            <label>Região / cidade</label>
-                            <input
-                                type="text"
-                                name="regiao"
-                                required
-                            >
-                        </div>
-
-                        <div class="campo">
-                            <label>Local onde pode panfletar</label>
-                            <input
-                                type="text"
-                                name="local"
-                                placeholder="Ex.: Rodoviária, campus, bairro..."
-                                required
-                            >
-                        </div>
-
-                    </div>
-
-
-                    <!-- DISPONIBILIDADE -->
-                    <div class="disponibilidade">
-
-                        <div class="subtitulo">
-                            <h3>DIAS E TURNOS</h3>
-
-                            <p>
-                                Escolha os turnos disponíveis
-                                em cada dia.
-                            </p>
-                        </div>
-
-
-                        <div class="dias">
-
-                            <div class="dia">
-                                <h4>SEGUNDA</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="segunda_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="segunda_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="segunda_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input
-                                    class="horario"
-                                    name="segunda_horario"
-                                    placeholder="Horário específico (opcional)"
-                                >
-                            </div>
-
-
-                            <div class="dia">
-                                <h4>TERÇA</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="terca_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="terca_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="terca_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input class="horario" name="terca_horario" placeholder="Horário específico (opcional)">
-                            </div>
-
-
-                            <div class="dia">
-                                <h4>QUARTA</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="quarta_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="quarta_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="quarta_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input class="horario" name="quarta_horario" placeholder="Horário específico (opcional)">
-                            </div>
-
-
-                            <div class="dia">
-                                <h4>QUINTA</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="quinta_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="quinta_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="quinta_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input class="horario" name="quinta_horario" placeholder="Horário específico (opcional)">
-                            </div>
-
-
-                            <div class="dia">
-                                <h4>SEXTA</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="sexta_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="sexta_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="sexta_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input class="horario" name="sexta_horario" placeholder="Horário específico (opcional)">
-                            </div>
-
-
-                            <div class="dia">
-                                <h4>SÁBADO</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="sabado_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="sabado_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="sabado_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input class="horario" name="sabado_horario" placeholder="Horário específico (opcional)">
-                            </div>
-
-
-                            <div class="dia">
-                                <h4>DOMINGO</h4>
-
-                                <div class="turnos">
-                                    <label>
-                                        <input type="checkbox" name="domingo_manha">
-                                        <span>MANHÃ</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="domingo_tarde">
-                                        <span>TARDE</span>
-                                    </label>
-
-                                    <label>
-                                        <input type="checkbox" name="domingo_noite">
-                                        <span>NOITE</span>
-                                    </label>
-                                </div>
-
-                                <input class="horario" name="domingo_horario" placeholder="Horário específico (opcional)">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- OBSERVAÇÕES -->
-                    <div class="campo">
-
-                        <label>Observações</label>
-
-                        <textarea
-                            name="observacoes"
-                            rows="4"
-                            placeholder="Alguma informação importante?"
-                        ></textarea>
-
-                    </div>
-
-
-                    <button type="submit" class="botao-enviar">
-                        ENVIAR CADASTRO
-                    </button>
-
-                    <p id="status"></p>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- RODAPÉ -->
-    <footer>
-
-        <div class="container footer-conteudo">
-
-            <strong>UP</strong>
-
-            <span>
-                UNIDADE POPULAR PELO SOCIALISMO
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <script src="app.js"></script>
-
-</body>
-</html>
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@500;600;700;800;900&display=swap'
+);
+
+:root {
+    --amarelo: #f5a900;
+    --preto: #0b0b0b;
+    --branco: #ffffff;
+    --papel: #f2efe7;
+    --cinza: #777777;
+    --cinza-claro: #aaaaaa;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--papel);
+    color: var(--preto);
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOPO
+========================================================= */
+
+.topo {
+    background: var(--preto);
+    color: var(--branco);
+    border-bottom: 4px solid var(--amarelo);
+}
+
+.topo-conteudo {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.logo-texto {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 0.85;
+}
+
+.logo-texto b {
+    color: var(--amarelo);
+}
+
+.logo-up {
+    font-family: "Anton", sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--branco);
+    letter-spacing: -2px;
+}
+
+.tag {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   HERO / APRESENTAÇÃO
+========================================================= */
+
+.hero {
+    background: var(--amarelo);
+    padding: 78px 0 90px;
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(65px, 9vw, 115px);
+    line-height: 0.83;
+}
+
+.hero h1 span {
+    color: var(--branco);
+    -webkit-text-stroke: 2px var(--preto);
+}
+
+.intro {
+    max-width: 650px;
+    margin: 28px 0;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
+
+.botao {
+    display: inline-block;
+    padding: 16px 22px;
+    background: var(--preto);
+    color: var(--branco);
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: 7px 7px var(--branco);
+    transition: 0.15s;
+}
+
+.botao:hover {
+    transform: translate(2px, 2px);
+}
+
+
+/* =========================================================
+   ÁREA DO CADASTRO
+========================================================= */
+
+.cadastro {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 85px 0 105px;
+}
+
+.titulo-secao {
+    max-width: 780px;
+    margin-bottom: 35px;
+}
+
+.titulo-secao .eyebrow {
+    color: var(--amarelo);
+}
+
+.titulo-secao h2 {
+    margin: 0 0 18px;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(55px, 8vw, 92px);
+    line-height: 0.84;
+}
+
+.titulo-secao p {
+    color: var(--cinza-claro);
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   CAIXA DO FORMULÁRIO
+========================================================= */
+
+.formulario-box {
+    background: var(--branco);
+    color: var(--preto);
+    padding: 34px;
+    box-shadow: 10px 10px var(--amarelo);
+}
+
+
+/* =========================================================
+   CAMPOS EM DUAS COLUNAS
+========================================================= */
+
+.campos-duplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 22px;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.campo {
+    display: block;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.campo input,
+.campo textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 13px;
+    border: 2px solid var(--preto);
+    background: var(--branco);
+    color: var(--preto);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: 3px solid var(--amarelo);
+}
+
+
+/* =========================================================
+   DISPONIBILIDADE
+========================================================= */
+
+.disponibilidade {
+    margin: 8px 0 27px;
+    padding: 25px 0;
+    border-top: 3px solid var(--preto);
+    border-bottom: 3px solid var(--preto);
+}
+
+.subtitulo h3 {
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: 36px;
+}
+
+.subtitulo p {
+    margin-top: 8px;
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CADA DIA
+========================================================= */
+
+.dia {
+    margin: 12px 0;
+    padding: 15px;
+    border: 2px solid var(--preto);
+}
+
+.dia-titulo {
+    margin-bottom: 10px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TURNOS
+========================================================= */
+
+.turnos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.turnos label {
+    margin: 0;
+}
+
+.turnos input {
+    position: absolute;
+    width: 1px;
+    opacity: 0;
+}
+
+.turnos span {
+    display: block;
+    padding: 12px;
+    border: 2px solid var(--preto);
+    text-align: center;
+    cursor: pointer;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    transition: 0.1s;
+}
+
+.turnos span:hover {
+    background: #eeeeee;
+}
+
+.turnos input:checked + span {
+    background: var(--amarelo);
+}
+
+
+/* =========================================================
+   HORÁRIO ESPECÍFICO
+========================================================= */
+
+.horario {
+    width: 100%;
+    margin-top: 9px;
+    padding: 13px;
+    border: 2px solid var(--preto);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.horario:focus {
+    outline: 3px solid var(--amarelo);
+}
+
+
+/* =========================================================
+   BOTÃO ENVIAR
+========================================================= */
+
+.botao-enviar {
+    width: 100%;
+    padding: 18px;
+    border: 3px solid var(--preto);
+    background: var(--amarelo);
+    color: var(--preto);
+    cursor: pointer;
+    font-family: "Anton", sans-serif;
+    font-size: 32px;
+    box-shadow: 7px 7px var(--preto);
+    transition: 0.15s;
+}
+
+.botao-enviar:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 5px 5px var(--preto);
+}
+
+
+/* =========================================================
+   MENSAGEM
+========================================================= */
+
+#status {
+    min-height: 22px;
+    margin: 20px 0 0;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .topo-conteudo {
+        min-height: 68px;
+    }
+
+    .logo-texto {
+        font-size: 15px;
+    }
+
+    .logo-up {
+        font-size: 40px;
+    }
+
+    .hero {
+        padding: 58px 0 70px;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .campos-duplos {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-box {
+        padding: 22px;
+    }
+
+    .turnos {
+        grid-template-columns: 1fr;
+    }
+}
