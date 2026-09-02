@@ -200,8 +200,14 @@ formulario.addEventListener(
 
     dias: disponibilidade,
 
+    horarios: Object.fromEntries(
+        dias.map(([chave]) => [
+            chave,
+            formulario.elements[chave + "_horario"].value.trim()
+        ])
+    ),
+
     observacoes: formulario.observacoes.value.trim()
-    
         };
 
 
