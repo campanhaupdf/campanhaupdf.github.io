@@ -195,8 +195,11 @@ formulario.addEventListener(
             regiao:
                 formulario.regiao.value.trim(),
 
-            local:
-                formulario.local.value.trim(),
+            local: Array.from(
+    formulario.querySelectorAll(
+        'input[name="local"]:checked'
+    )
+).map(input => input.value),
 
             disponibilidade:
                 disponibilidade,
@@ -270,6 +273,105 @@ formulario.addEventListener(
 
             status.textContent =
                 "Não foi possível enviar. Verifique o Supabase.";
+        }
+    }
+);
+/* =========================================================
+   SELETOR DE LOCAIS
+========================================================= */
+
+const abrirLocais =
+    document.getElementById("abrirLocais");
+
+const listaLocais =
+    document.getElementById("listaLocais");
+
+const locaisSelecionados =
+    document.getElementById("locaisSelecionados");
+
+
+/* ABRIR / FECHAR */
+
+abrirLocais.addEventListener("click", function () {
+
+    listaLocais.classList.toggle("aberto");
+
+    if (listaLocais.classList.contains("aberto")) {
+        abrirLocais.querySelector("span").textContent = "▲";
+    } else {
+        abrirLocais.querySelector("span").textContent = "▼";
+    }
+
+});
+
+
+/* ATUALIZAR TEXTO */
+
+const caixasLocais =
+    document.querySelectorAll(
+        'input[name="local"]'
+    );
+
+caixasLocais.forEach(function (checkbox) {
+
+    checkbox.addEventListener(
+        "change",
+        atualizarLocais
+    );
+
+});
+
+
+function atualizarLocais() {
+
+    const selecionados =
+        Array.from(caixasLocais)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+
+    if (selecionados.length === 0) {
+
+        locaisSelecionados.textContent =
+            "Nenhum local selecionado";
+
+        abrirLocais.childNodes[0].textContent =
+            "SELECIONE OS LOCAIS ";
+
+        return;
+    }
+
+
+    locaisSelecionados.textContent =
+        selecionados.join(", ");
+
+    abrirLocais.childNodes[0].textContent =
+        selecionados.length +
+        (selecionados.length === 1
+            ? " LOCAL SELECIONADO "
+            : " LOCAIS SELECIONADOS ");
+}
+
+
+/* FECHAR AO CLICAR FORA */
+
+document.addEventListener(
+    "click",
+    function (evento) {
+
+        if (
+            !evento.target.closest(
+                ".seletor-locais"
+            )
+        ) {
+
+            listaLocais.classList.remove(
+                "aberto"
+            );
+
+            abrirLocais.querySelector(
+                "span"
+            ).textContent = "▼";
         }
     }
 );

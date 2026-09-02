@@ -419,3 +419,87 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================================
+   SELETOR DE LOCAIS
+========================================================= */
+
+.seletor-locais {
+    position: relative;
+    margin-top: 8px;
+}
+
+.botao-locais {
+    width: 100%;
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--white);
+    color: var(--black);
+
+    border: 2px solid var(--black);
+    box-shadow: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.botao-locais:hover {
+    background: #eeeeee;
+}
+
+.lista-locais {
+    display: none;
+
+    width: 100%;
+    max-height: 260px;
+    overflow-y: auto;
+
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-top: 0;
+}
+
+.lista-locais.aberto {
+    display: block;
+}
+
+.lista-locais label {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 11px 13px;
+
+    border-bottom: 1px solid #dddddd;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.lista-locais label:hover {
+    background: #eeeeee;
+}
+
+.lista-locais input {
+    width: auto;
+    margin: 0 10px 0 0;
+}
+
+.lista-locais label span {
+    font-weight: 700;
+}
+
+#locaisSelecionados {
+    display: block;
+    margin-top: 8px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+    font-weight: 700;
+}
