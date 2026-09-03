@@ -51,19 +51,53 @@ let cadastros = [];
 
 async function verificarLogin() {
 
-    const resposta = await fetch(
-        SUPABASE_URL + "/auth/v1/user",
-        {
-            headers: supabaseHeaders
-        }
+    const token = localStorage.getItem(
+        "supabase_access_token"
     );
 
-    if (resposta.ok) {
+    // Não existe sessão
+    if (!token) {
+        mostrarLogin();
+        return;
+    }
 
-        mostrarPainel();
-        carregarCadastros();
+    try {
 
-    } else {
+        const resposta = await fetch(
+            SUPABASE_URL + "/auth/v1/user",
+            {
+                headers: {
+                    "apikey": SUPABASE_ANON_KEY,
+                    "Authorization": "Bearer " + token
+                }
+            }
+        );
+
+        if (resposta.ok) {
+
+            mostrarPainel();
+            carregarCadastros();
+
+        } else {
+
+            localStorage.removeItem(
+                "supabase_access_token"
+            );
+
+            localStorage.removeItem(
+                "supabase_refresh_token"
+            );
+
+            mostrarLogin();
+
+        }
+
+    } catch (erro) {
+
+        console.error(erro);
+        mostrarLogin();
+
+    }
 
         mostrarLogin();
 
