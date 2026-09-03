@@ -99,12 +99,7 @@ async function verificarLogin() {
 
     }
 
-        mostrarLogin();
-
-    }
-
 }
-
 
 /* =========================================================
    MOSTRAR LOGIN
