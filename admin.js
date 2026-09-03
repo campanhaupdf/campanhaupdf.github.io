@@ -414,12 +414,23 @@ function aplicarFiltros() {
     renderizar(filtrados);
 
 }
-
-
 /* =========================================================
    RENDERIZAR
 ========================================================= */
+function formatarWhatsApp(numero) {
 
+    const numeros = String(numero || "").replace(/\D/g, "");
+
+    if (numeros.length === 11) {
+        return `(${numeros.slice(0, 2)}) ${numeros.slice(2, 7)}-${numeros.slice(7)}`;
+    }
+
+    if (numeros.length === 10) {
+        return `(${numeros.slice(0, 2)}) ${numeros.slice(2, 6)}-${numeros.slice(6)}`;
+    }
+
+    return numero;
+}
 function renderizar(lista) {
 
     contador.textContent =
@@ -464,10 +475,21 @@ function renderizar(lista) {
                             </h2>
 
                             <div class="cadastro-contato">
-                                ${escapar(cadastro.whatsapp)}
-                                ·
-                                ${escapar(cadastro.regiao)}
-                            </div>
+
+    <a
+        href="https://wa.me/55${String(cadastro.whatsapp).replace(/\D/g, "")}"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-link"
+    >
+        ${escapar(formatarWhatsApp(cadastro.whatsapp))}
+    </a>
+
+    ·
+
+    ${escapar(cadastro.regiao)}
+
+</div>
 
                         </div>
 
