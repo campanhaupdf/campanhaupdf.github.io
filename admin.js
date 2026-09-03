@@ -524,39 +524,29 @@ function renderizar(lista) {
    DIAS
 ========================================================= */
 
-function gerarDias(dias) {
+function gerarDiasHTML(dias) {
 
     if (!dias) {
-        return `
-            <span class="vazio">
-                Não informado
-            </span>
-        `;
+        return '<span class="vazio">Não informado</span>';
     }
 
-    // Se o Supabase devolver o JSON como texto,
-    // transforma em objeto
+    // Se o Supabase enviar o JSON como texto,
+    // transforma o texto em objeto
     if (typeof dias === "string") {
-
         try {
             dias = JSON.parse(dias);
         } catch (erro) {
-
-            console.error(
-                "Erro ao interpretar dias:",
-                erro
-            );
+            console.error("Erro ao ler dias:", erro);
 
             return `
                 <span class="vazio">
-                    Disponibilidade não encontrada
+                    Não foi possível carregar os dados.
                 </span>
             `;
         }
     }
 
     const nomes = {
-
         segunda: "Segunda",
         terca: "Terça",
         quarta: "Quarta",
@@ -564,78 +554,72 @@ function gerarDias(dias) {
         sexta: "Sexta",
         sabado: "Sábado",
         domingo: "Domingo"
-
     };
 
     let resultado = "";
 
-    for (const [chave, dados] of Object.entries(dias)) {
+    Object.entries(dias).forEach(
+        ([chave, dados]) => {
 
-        if (!dados || typeof dados !== "object") {
-            continue;
-        }
-
-        const turnos = [];
-
-        if (dados.manha === true) {
-            turnos.push("☀ manhã");
-        }
-
-        if (dados.tarde === true) {
-            turnos.push("◐ tarde");
-        }
-
-        if (dados.noite === true) {
-            turnos.push("☾ noite");
-        }
-
-        if (
-            turnos.length === 0 &&
-            !dados.horario
-        ) {
-            continue;
-        }
-
-        let texto = turnos.join(" · ");
-
-        if (dados.horario) {
-
-            if (texto) {
-                texto += " · ";
+            if (!dados || typeof dados !== "object") {
+                return;
             }
 
-            texto += escapar(dados.horario);
+            const turnos = [];
+
+            if (dados.manha === true) {
+                turnos.push("☀ manhã");
+            }
+
+            if (dados.tarde === true) {
+                turnos.push("◐ tarde");
+            }
+
+            if (dados.noite === true) {
+                turnos.push("☾ noite");
+            }
+
+            if (
+                turnos.length === 0 &&
+                !dados.horario
+            ) {
+                return;
+            }
+
+            let texto = turnos.join(" · ");
+
+            if (dados.horario) {
+
+                if (texto) {
+                    texto += " · ";
+                }
+
+                texto += escapar(dados.horario);
+            }
+
+            resultado += `
+                <div class="dia-admin">
+                    <strong>
+                        ${nomes[chave] || chave}
+                    </strong>
+
+                    <span>
+                        ${texto}
+                    </span>
+                </div>
+            `;
         }
-
-        resultado += `
-
-            <div class="dia-admin">
-
-                <strong>
-                    ${nomes[chave] || chave}
-                </strong>
-
-                <span>
-                    ${texto}
-                </span>
-
-            </div>
-
-        `;
-    }
+    );
 
     if (!resultado) {
-
         return `
             <span class="vazio">
-                Nenhuma disponibilidade informada
+                Nenhuma disponibilidade informada.
             </span>
         `;
-
     }
 
     return resultado;
-    
 }
 
 
