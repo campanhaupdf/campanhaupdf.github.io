@@ -524,13 +524,39 @@ function renderizar(lista) {
    DIAS
 ========================================================= */
 
-function gerarDiasHTML(dias) {
+function gerarDias(dias) {
 
     if (!dias) {
-        return '<span class="vazio">Não informado</span>';
+        return `
+            <span class="vazio">
+                Não informado
+            </span>
+        `;
+    }
+
+    // Se o Supabase devolver o JSON como texto,
+    // transforma em objeto
+    if (typeof dias === "string") {
+
+        try {
+            dias = JSON.parse(dias);
+        } catch (erro) {
+
+            console.error(
+                "Erro ao interpretar dias:",
+                erro
+            );
+
+            return `
+                <span class="vazio">
+                    Disponibilidade não encontrada
+                </span>
+            `;
+        }
     }
 
     const nomes = {
+
         segunda: "Segunda",
         terca: "Terça",
         quarta: "Quarta",
@@ -538,62 +564,78 @@ function gerarDiasHTML(dias) {
         sexta: "Sexta",
         sabado: "Sábado",
         domingo: "Domingo"
+
     };
 
-    return Object.entries(dias)
-        .map(([chave, dados]) => {
+    let resultado = "";
 
-            const turnos = [];
+    for (const [chave, dados] of Object.entries(dias)) {
 
-            if (dados.manha) {
-                turnos.push("☀ manhã");
+        if (!dados || typeof dados !== "object") {
+            continue;
+        }
+
+        const turnos = [];
+
+        if (dados.manha === true) {
+            turnos.push("☀ manhã");
+        }
+
+        if (dados.tarde === true) {
+            turnos.push("◐ tarde");
+        }
+
+        if (dados.noite === true) {
+            turnos.push("☾ noite");
+        }
+
+        if (
+            turnos.length === 0 &&
+            !dados.horario
+        ) {
+            continue;
+        }
+
+        let texto = turnos.join(" · ");
+
+        if (dados.horario) {
+
+            if (texto) {
+                texto += " · ";
             }
 
-            if (dados.tarde) {
-                turnos.push("◐ tarde");
-            }
+            texto += escapar(dados.horario);
+        }
 
-            if (dados.noite) {
-                turnos.push("☾ noite");
-            }
+        resultado += `
 
-            if (
-                turnos.length === 0 &&
-                !dados.horario
-            ) {
-                return "";
-            }
+            <div class="dia-admin">
 
-            let texto =
-                turnos.join(" · ");
+                <strong>
+                    ${nomes[chave] || chave}
+                </strong>
 
-            if (dados.horario) {
+                <span>
+                    ${texto}
+                </span>
 
-                texto +=
-                    " · " +
-                    escapar(dados.horario);
+            </div>
 
-            }
+        `;
+    }
 
-            return `
+    if (!resultado) {
 
-                <div class="dia-admin">
+        return `
+            <span class="vazio">
+                Nenhuma disponibilidade informada
+            </span>
+        `;
 
-                    <strong>
-                        ${nomes[chave] || chave}
-                    </strong>
+    }
 
-                    <span>
-                        ${texto}
-                    </span>
-
-                </div>
-
-            `;
-
-        })
-        .join("");
-
+    return resultado;
+    
 }
 
 
