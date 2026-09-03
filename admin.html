@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administração — Unidade Popular</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="container topo-conteudo">
+
+            <div class="marca">
+                <img src="logo-up.png" alt="Unidade Popular">
+                <div>
+                    <strong>UNIDADE POPULAR</strong>
+                    <span>ADMINISTRAÇÃO</span>
+                </div>
+            </div>
+
+            <button id="sair" class="botao-sair">
+                SAIR
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- LOGIN -->
+
+    <main id="login-area">
+
+        <div class="login-box">
+
+            <p class="eyebrow">
+                ÁREA RESTRITA
+            </p>
+
+            <h1>
+                ADMINISTRAÇÃO
+            </h1>
+
+            <p>
+                Entre com sua conta administrativa.
+            </p>
+
+            <form id="login-form">
+
+                <label>
+                    E-mail
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Senha
+                    <input
+                        type="password"
+                        id="senha"
+                        required
+                    >
+                </label>
+
+                <button type="submit" class="botao-principal">
+                    ENTRAR
+                </button>
+
+                <p id="login-status"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- PAINEL -->
+
+    <main id="painel" class="escondido">
+
+        <div class="container">
+
+            <div class="cabecalho-painel">
+
+                <div>
+                    <p class="eyebrow">
+                        CADASTROS
+                    </p>
+
+                    <h1>
+                        DISPONIBILIDADES
+                    </h1>
+                </div>
+
+                <button id="atualizar" class="botao-atualizar">
+                    ↻ ATUALIZAR
+                </button>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <section class="filtros">
+
+                <input
+                    type="search"
+                    id="busca"
+                    placeholder="Buscar por nome, WhatsApp ou região..."
+                >
+
+                <select id="filtro-local">
+                    <option value="">Todos os locais</option>
+                </select>
+
+                <select id="filtro-dia">
+                    <option value="">Todos os dias</option>
+                    <option value="segunda">Segunda</option>
+                    <option value="terca">Terça</option>
+                    <option value="quarta">Quarta</option>
+                    <option value="quinta">Quinta</option>
+                    <option value="sexta">Sexta</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+
+                <select id="filtro-turno">
+                    <option value="">Todos os turnos</option>
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+
+            </section>
+
+
+            <div class="resumo">
+                <strong id="contador">0</strong>
+                <span>cadastros encontrados</span>
+            </div>
+
+
+            <!-- CADASTROS -->
+
+            <section id="lista-cadastros"></section>
+
+            <p id="status"></p>
+
+        </div>
+
+    </main>
+
+
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
